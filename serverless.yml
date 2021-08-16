@@ -1,0 +1,14 @@
+org: caiosilveira
+app: casion
+service: aws-node-mongodb-atlas 
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http: GET hello
+plugins:
+  - serverless-offline
